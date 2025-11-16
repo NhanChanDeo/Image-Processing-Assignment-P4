@@ -1,2 +1,5 @@
 UTKFace
 labeled/full
+venv/
+__pycache__/
+*.pyc
