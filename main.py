@@ -31,7 +31,7 @@ def main():
     parser.add_argument("--patience", type=int, default=10, help="Early stopping patience")
     
     # Loss weight arguments
-    parser.add_argument("--alpha", type=float, default=1.0, help="Weight for age loss")
+    parser.add_argument("--alpha", type=float, default=2.0, help="Weight for age loss")
     parser.add_argument("--beta", type=float, default=1.0, help="Weight for gender loss")
     
     # Checkpoint arguments
