@@ -1,4 +1,4 @@
-"""Main script to train Age-Gender prediction model."""
+"""Main script to train Age- Gender prediction model."""
 import argparse
 import torch
 import torch.nn as nn
@@ -14,7 +14,7 @@ from trainer.trainer import Trainer
 
 def main():
     """Main training script."""
-    parser = argparse.ArgumentParser(description="Train Age-Gender Prediction Model")
+    parser = argparse.ArgumentParser(description="Train Age- Gender Prediction Model")
     
     # Data arguments
     parser.add_argument("--data_dir", type=str, default="./labeled", help="Path to labeled data directory")
@@ -60,17 +60,17 @@ def main():
         num_workers=args.num_workers,
         use_weighted_sampler=True,
     )
-    print(f"✓ Data loaded successfully")
+    print(f"- Data loaded successfully")
     
     # Create model
     print("Creating model...")
     model = AgeGenderModel(pretrained=args.pretrained)
     model = model.to(device)
-    print(f"✓ Model created: AgeGenderModel (ResNet50)")
+    print(f"- Model created: AgeGenderModel (ResNet50)")
     
     # Create loss function
     criterion = MultiTaskLoss(alpha=args.alpha, beta=args.beta)
-    print(f"✓ Loss function: MultiTaskLoss (alpha={args.alpha}, beta={args.beta})")
+    print(f"- Loss function: MultiTaskLoss (alpha={args.alpha}, beta={args.beta})")
     
     # Create optimizer
     optimizer = optim.Adam(
@@ -78,7 +78,7 @@ def main():
         lr=args.learning_rate,
         weight_decay=args.weight_decay,
     )
-    print(f"✓ Optimizer: Adam (lr={args.learning_rate}, weight_decay={args.weight_decay})")
+    print(f"- Optimizer: Adam (lr={args.learning_rate}, weight_decay={args.weight_decay})")
     
     # Create trainer
     trainer = Trainer(

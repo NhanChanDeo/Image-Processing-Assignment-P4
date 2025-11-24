@@ -1,10 +1,20 @@
+# Python
 __pycache__/
-*.py[cod]
-.vscode/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
 venv/
+.env
+.vscode/
+*.log
+
+# Project Data (assuming you don't want to upload the dataset)
 labeled/
+data/
+
+# Checkpoints and Tuning Results
 checkpoints/
-logs/
+tuning_results/
 *.pth
-*.jpg
-*.png
